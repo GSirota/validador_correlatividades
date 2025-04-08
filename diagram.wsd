@@ -1,0 +1,29 @@
+@startuml validador_correlatividades
+
+class Alumno{
+    legajo : String 
+    nombre : String 
+    materiasAprobadas : List<Materia> 
+    +agregarMateriasAprobadas(materia : Materia) : void
+}
+
+class Inscripcion{
+    materias : List<Materia>
+    alumno : Alumno
+    +aprobada() : Boolean
+    +agregarMateriaInscripcion(materia : Materia) : void
+    
+}
+
+class Materia{
+    nombre : String
+    correlativas : List<Materia>
+    +puedeCursar(alumno : Alumno) : Boolean
+    +agregarCorrelativas(materia : Materia) : void
+}
+
+Alumno -> Materia
+Inscripcion o-- Alumno
+Inscripcion o-- "*" Materia
+
+@enduml

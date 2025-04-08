@@ -9,11 +9,11 @@ public class Alumno {
 
     @Getter
     List<Materia> materiasAprobadas ;
-    Integer legajo;
+    String legajo;
     String nombre;
 
 
-    public Alumno(Integer legajo, String nombre) {
+    public Alumno(String legajo, String nombre) {
         this.legajo = legajo;
         this.materiasAprobadas = new ArrayList<>();
         this.nombre = nombre;

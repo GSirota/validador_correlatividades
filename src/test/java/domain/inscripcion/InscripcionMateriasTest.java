@@ -19,7 +19,7 @@ public class InscripcionMateriasTest {
         pdep = new Materia("Paradigmas de Programacion");
         am = new Materia("Analisis Matematico I");
         am2 = new Materia("Analisis Matematico II");
-        pepe = new Alumno(1234, "Pepe Grillo");
+        pepe = new Alumno("1234", "Pepe Grillo");
 
         pdep.agregarCorrelativas(algoritmos);
         am2.agregarCorrelativas(am);
